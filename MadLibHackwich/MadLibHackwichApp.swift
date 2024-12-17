@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MadLibHackwichApp: App {
+    
+    @State var madLibData = myClass()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(madLibData)
         }
     }
 }

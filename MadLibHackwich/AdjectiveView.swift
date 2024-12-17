@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AdjectiveView: View {
     
     @Environment(myClass.self) var madLibData
     
@@ -17,8 +17,8 @@ struct ContentView: View {
         
         NavigationStack {
             VStack {
-                TextField("Enter a Noun:", text: $madLibData.noun)
-                NavigationLink(destination: VerbView()) { Text("Next")}
+                TextField("Enter an Adjective:", text: $madLibData.adjective)
+                NavigationLink(destination: StoryView()) { Text("Next")}
             }
             }
         
@@ -28,6 +28,6 @@ struct ContentView: View {
 
 #Preview {
     @State var madLibData = myClass()
-   return ContentView()
+   return AdjectiveView()
         .environment(madLibData)
 }
